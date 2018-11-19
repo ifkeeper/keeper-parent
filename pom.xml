@@ -25,10 +25,16 @@
 		<ali.druid.version>1.1.10</ali.druid.version>
 		<!--Ali Fast Json Version-->
 		<ali.fastjson.version>1.2.47</ali.fastjson.version>
+		<!--Google.guava Version-->
+		<com.guava.version>23.0</com.guava.version>
+		<!--org.freemarker Version-->
+		<org.freemarker.version>2.3.23</org.freemarker.version>
 		<!--Common.io Version-->
 		<commons.io.version>2.6</commons.io.version>
 		<!--Common.lang3 Version-->
 		<common.lang3.version>3.8</common.lang3.version>
+		<!--Commons.codec Version-->
+		<commons.codec.version>1.11</commons.codec.version>
 		<!--Common.collections Version-->
 		<commons.collections.version>4.2</commons.collections.version>
 		<!--Spring Boot Version-->
@@ -117,6 +123,13 @@
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!--org-->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${org.freemarker.version}</version>
+		</dependency>
+
 		<!--MySQL-->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -153,6 +166,11 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>${commons.collections.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons.codec.version}</version>
+		</dependency>
 
 		<!--swagger2-->
 		<dependency>
@@ -171,6 +189,13 @@
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>${joda.time.version}</version>
+		</dependency>
+
+		<!--google-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${com.guava.version}</version>
 		</dependency>
 	</dependencies>
 
