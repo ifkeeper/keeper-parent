@@ -124,3 +124,21 @@ Spring Boot 默认输出为 `JSON` 格式, 直接引用 `spring-cloud-starter-ne
 	<version>${swagger2.version}</version>
 </dependency>
 ```
+
+# 问题
+
+引入 `freemarker` 依赖时存在错误或BUG，需要引入 `v2.3.28` 版本或者直接引入 SpringCloud 快速集成 `spring-boot-starter-freemarker` 依赖。
+
+```xml
+<dependency>
+	<groupId>org.freemarker</groupId>
+	<artifactId>freemarker</artifactId>
+	<version>2.3.23</version>
+</dependency>
+```
+
+输出错误日志部分如下：
+
+```
+FreeMarker template error (DEBUG mode; use RETHROW in production!): Template importing failed (for parameter value "/spring.ftl"): 
+```
