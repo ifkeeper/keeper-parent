@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <localRepository>/Users/mingrn/Maven/repository</localRepository>
+
+    <!-- servers -->
+    <servers>
+
+        <server>
+            <id>releases</id>
+            <username>admin</username>
+            <password>admin123</password>
+        </server>
+        <server>
+            <id>snapshots</id>
+            <username>admin</username>
+            <password>admin123</password>
+        </server>
+
+    </servers>
+
+
+    <mirrors>
+        <!-- private start -->
+        <!--<mirror>
+          <id>nexus-mirror-1</id>
+          <mirrorOf>external:*,!nexus-thirdparty</mirrorOf>
+          <url>http://localhost:9000/nexus/content/groups/public/</url>
+        </mirror>
+        <mirror>
+          <id>nexus-mirror-2</id>
+          <mirrorOf>*</mirrorOf>
+          <url>http://localhost:9000/nexus/content/groups/public/</url>
+        </mirror>-->
+        <!-- private end -->
+        
+    </mirrors>
+
+
+    <profiles>
+
+        <profile>
+            <id>nexus</id>
+            <repositories>
+                <repository>
+                    <id>nexus-public</id>
+                    <url>http://localhost:9000/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>nexus-thirdparty</id>
+                    <url>http://localhost:9000/nexus/content/repositories/thirdparty/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>maven-center</id>
+                    <name>Maven Repository Switchboard</name>
+                    <layout>default</layout>
+                    <url>http://localhost:9000/nexus/content/repositories/central/</url>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <!--插件库地址-->
+                <!--<pluginRepository>
+                    <id>nexus-plugin</id>
+                    <url>http://localhost:9000/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>-->
+            </pluginRepositories>
+        </profile>
+
+         <profile>
+            <id>downloadSources</id>
+            <properties>
+                <downloadSources>true</downloadSources>
+                <downloadJavadocs>true</downloadJavadocs>
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <!-- 激活指定配置 -->
+    <activeProfiles>
+        <activeProfile>nexus</activeProfile>
+         <activeProfile>downloadSources</activeProfile>
+    </activeProfiles>
+</settings>
