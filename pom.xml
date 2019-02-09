@@ -31,6 +31,8 @@
 		<org.freemarker.version>2.3.28</org.freemarker.version>
 		<!--Common.io Version-->
 		<commons.io.version>2.6</commons.io.version>
+		<!--Common.fileupload Version-->
+		<commons.fileupload.version>1.4</commons.fileupload.version>
 		<!--Common.lang3 Version-->
 		<common.lang3.version>3.8</common.lang3.version>
 		<!--Commons.codec Version-->
@@ -165,6 +167,11 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>${commons.io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons.fileupload.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
