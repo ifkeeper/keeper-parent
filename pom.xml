@@ -1,284 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mingrn.keeper</groupId>
-	<artifactId>keeper-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>com.mingrn.keeper</groupId>
+    <artifactId>keeper-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<properties>
-		<!--私服发布端口-->
-		<deploy.port>9000</deploy.port>
-		<!--私服发布主机-->
-		<deploy.host>localhost</deploy.host>
-		<!--JDK Version-->
-		<java.version>1.8</java.version>
-		<!--MySQL Version-->
-		<mysql.version>5.1.46</mysql.version>
-		<!--Swagger2 Version-->
-		<swagger2.version>2.7.0</swagger2.version>
-		<!--Joda Time Version-->
-		<joda.time.version>2.10.1</joda.time.version>
-		<!--Ali druid-->
-		<ali.druid.version>1.1.10</ali.druid.version>
-		<!--Ali Fast Json Version-->
-		<ali.fastjson.version>1.2.47</ali.fastjson.version>
-		<!--Google.guava Version-->
-		<com.guava.version>23.0</com.guava.version>
-		<!--org.freemarker Version-->
-		<org.freemarker.version>2.3.28</org.freemarker.version>
-		<!--Common.io Version-->
-		<commons.io.version>2.6</commons.io.version>
-		<!--Common.fileupload Version-->
-		<commons.fileupload.version>1.4</commons.fileupload.version>
-		<!--Common.lang3 Version-->
-		<common.lang3.version>3.8</common.lang3.version>
-		<!--Commons.codec Version-->
-		<commons.codec.version>1.11</commons.codec.version>
-		<!--Common.collections Version-->
-		<commons.collections.version>4.2</commons.collections.version>
-		<!--Spring Boot Version-->
-		<spring-boot.version>2.0.3.RELEASE</spring-boot.version>
-		<!--Spring Cloud Version-->
-		<spring-cloud.version>Finchley.RC2</spring-cloud.version>
-		<!--Project Build Source Encoding-->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!--Project Output Encoding-->
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
+    <properties>
+        <!--私服发布端口-->
+        <deploy.port>9000</deploy.port>
+        <!--私服发布主机-->
+        <deploy.host>localhost</deploy.host>
+        <!--JDK Version-->
+        <java.version>1.8</java.version>
+        <!--MySQL Version-->
+        <mysql.version>5.1.46</mysql.version>
+        <!--Swagger2 Version-->
+        <swagger2.version>2.7.0</swagger2.version>
+        <!--Joda Time Version-->
+        <joda.time.version>2.10.1</joda.time.version>
+        <!--Ali druid-->
+        <ali.druid.version>1.1.10</ali.druid.version>
+        <!--Ali Fast Json Version-->
+        <ali.fastjson.version>1.2.47</ali.fastjson.version>
+        <!--Google.guava Version-->
+        <com.guava.version>23.0</com.guava.version>
+        <!--org.freemarker Version-->
+        <org.freemarker.version>2.3.28</org.freemarker.version>
+        <!--Common.io Version-->
+        <commons.io.version>2.6</commons.io.version>
+        <!--Common.fileupload Version-->
+        <commons.fileupload.version>1.4</commons.fileupload.version>
+        <!--Common.lang3 Version-->
+        <common.lang3.version>3.8</common.lang3.version>
+        <!--Commons.codec Version-->
+        <commons.codec.version>1.11</commons.codec.version>
+        <!--Common.collections Version-->
+        <commons.collections.version>4.2</commons.collections.version>
+        <!--Spring Boot Version-->
+        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
+        <!--Spring Cloud Version-->
+        <spring-cloud.version>Finchley.RC2</spring-cloud.version>
+        <!--Project Build Source Encoding-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--Project Output Encoding-->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<!-- Import dependency management from Spring Boot -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<!-- Import dependency management from Spring Cloud -->
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <!-- Import dependency management from Spring Cloud -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-		<!--Spring Boot Actuator-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+        <!--Spring Boot Actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
-		<!--Spring Boot AOP-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
+        <!--Spring Boot AOP-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
 
-		<!--Spring Boot Mail-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
+        <!--Spring Boot Mail-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
 
-		<!--Spring Cloud Zuul-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-		</dependency>
-		<!--Spring Cloud Feign-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
+        <!--Spring Cloud Zuul-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+        <!--Spring Cloud Feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
 
-		<!--Spring Cloud Config-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+        <!--Spring Cloud Config-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
 
-		<!--freemarker-->
-		<!--<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>${org.freemarker.version}</version>
-		</dependency>-->
+        <!--freemarker-->
+        <!--<dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${org.freemarker.version}</version>
+        </dependency>-->
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-freemarker</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
 
-		<!--MySQL-->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
-			<scope>runtime</scope>
-		</dependency>
+        <!--MySQL-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
 
-		<!--Ali-->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>${ali.druid.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>${ali.fastjson.version}</version>
-		</dependency>
+        <!--Ali-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${ali.druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${ali.fastjson.version}</version>
+        </dependency>
 
-		<!--commons-->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${common.lang3.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons.io.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>${commons.fileupload.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
-			<version>${commons.collections.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>${commons.codec.version}</version>
-		</dependency>
+        <!--commons-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${common.lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons.fileupload.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
 
-		<!--swagger2-->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${swagger2.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${swagger2.version}</version>
-		</dependency>
+        <!--swagger2-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
 
-		<!--Joda-Time-->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${joda.time.version}</version>
-		</dependency>
+        <!--Joda-Time-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda.time.version}</version>
+        </dependency>
 
-		<!--google-->
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${com.guava.version}</version>
-		</dependency>
-	</dependencies>
+        <!--google-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${com.guava.version}</version>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<!--Maven插件-->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<!--JDK编译版本-->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-			<!-- 发布源码 -->
-			<plugin>
-				<artifactId>maven-source-plugin</artifactId>
-				<configuration>
-					<attach>true</attach>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>compile</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--Maven插件-->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <!--Maven插件-->
+            <!--<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+            <!--JDK编译版本-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <!-- 发布源码 -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
-	<!--发布本地私服使用-->
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<url>http://${deploy.host}:${deploy.port}/nexus/content/repositories/releases/</url>
-		</repository>
-		<!--快照版本，发布快照版本不使用该标签会报权限问题-->
-		<snapshotRepository>
-			<id>snapshots</id>
-			<url>http://${deploy.host}:${deploy.port}/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <!--发布本地私服使用-->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://${deploy.host}:${deploy.port}/nexus/content/repositories/releases/</url>
+        </repository>
+        <!--快照版本，发布快照版本不使用该标签会报权限问题-->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://${deploy.host}:${deploy.port}/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
