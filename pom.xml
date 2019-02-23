@@ -47,6 +47,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--Project Output Encoding-->
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--Maven plugins-->
+        <mvn.plugins.maven-compiler.version>3.8.0</mvn.plugins.maven-compiler.version>
     </properties>
 
     <dependencyManagement>
@@ -245,9 +247,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mvn.plugins.maven-compiler.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <!-- 发布源码 -->
