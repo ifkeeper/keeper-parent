@@ -220,7 +220,7 @@
 	<build>
 		<plugins>
 			<!--Maven插件-->
-			<!--<plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
@@ -230,7 +230,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>-->
+			</plugin>
 			<!--JDK编译版本-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
