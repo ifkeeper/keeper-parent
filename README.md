@@ -1,6 +1,6 @@
-# keeper-parent
+# itumate-parent
 
-**keeper-parent** 作为根依赖并没有直接引入 `Eureka` 相关依赖。
+**itumate-parent** 作为根依赖并没有直接引入 `Eureka` 相关依赖。
 
 Spring Boot 默认输出为 `JSON` 格式, 直接引用 `spring-cloud-starter-netflix-eureka-*` 依赖会导致
 输出为 `XML` 格式。

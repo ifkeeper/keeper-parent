@@ -1,12 +1,12 @@
-package com.mingrn.keeper;
+package com.mingrn.itumate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KeeperBaseApplication {
+public class ItumateBaseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KeeperBaseApplication.class, args);
+		SpringApplication.run(ItumateBaseApplication.class, args);
 	}
 }

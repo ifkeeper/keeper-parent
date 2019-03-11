@@ -1,4 +1,4 @@
-package com.mingrn.keeper;
+package com.mingrn.itumate;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class KeeperBaseApplicationTests {
+public class ItumateBaseApplicationTests {
 
 	@Test
 	public void contextLoads() {
