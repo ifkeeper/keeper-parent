@@ -13,6 +13,8 @@
         <deploy.port>9000</deploy.port>
         <!--私服发布主机-->
         <deploy.host>localhost</deploy.host>
+        <!--Docker Repository prefix-->
+        <docker.image.prefix>itumate</docker.image.prefix>
         <!--JDK Version-->
         <java.version>1.8</java.version>
         <!--MySQL Version-->
@@ -51,6 +53,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--Maven plugins-->
         <mvn.plugins.maven-compiler.version>3.8.0</mvn.plugins.maven-compiler.version>
+        <!--Dockerfile plugins-->
+        <docker.plugins.dockerfile-build>1.4.5</docker.plugins.dockerfile-build>
     </properties>
 
     <dependencyManagement>
@@ -234,6 +238,12 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                </plugin>
+                <!--Dockerfile插件-->
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>${docker.plugins.dockerfile-build}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
