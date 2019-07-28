@@ -56,6 +56,8 @@
         <mvn.plugins.source-compiler.version>3.0.1</mvn.plugins.source-compiler.version>
         <!--Dockerfile plugins-->
         <docker.plugins.dockerfile-build>1.4.5</docker.plugins.dockerfile-build>
+        <!--Spring-->
+        <spring.tx>5.0.7.RELEASE</spring.tx>
     </properties>
 
     <dependencyManagement>
@@ -146,6 +148,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <!--Spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.tx}</version>
         </dependency>
 
         <!--MySQL-->
