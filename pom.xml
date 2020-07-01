@@ -18,7 +18,7 @@
         <!--JDK Version-->
         <java.version>1.8</java.version>
         <!--MySQL Version-->
-        <mysql.version>5.1.46</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <!--Joda Time Version-->
         <joda.time.version>2.10.1</joda.time.version>
         <!--Ali druid-->
