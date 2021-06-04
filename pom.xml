@@ -38,7 +38,7 @@
         <!--Commons.codec Version-->
         <commons.codec.version>1.11</commons.codec.version>
         <!--Commons.http.client Version-->
-        <commons.http.client.version>4.5.6</commons.http.client.version>
+        <commons.http.client.version>4.5.13</commons.http.client.version>
         <!--Common.collections Version-->
         <commons.collections.version>4.2</commons.collections.version>
         <!--Spring Boot Version-->
